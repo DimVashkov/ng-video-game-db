@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Game } from 'src/app/models';
 
 @Component({
   selector: 'app-game-tabs',
@@ -7,6 +8,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class GameTabsComponent implements OnInit {
+  @Input() game: Game;
+
 
   constructor() { }
 
