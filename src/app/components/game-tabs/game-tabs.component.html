@@ -34,8 +34,8 @@
       </ng-container>
       </p>
     </mat-tab>
-    <!-- *ngIf="game.screenshots?.length" -->
-    <mat-tab label="Screenshots" >
+
+    <mat-tab label="Screenshots" *ngIf="game.screenshots?.length"  >
       <img
         class="game-screenshot"
         *ngFor="let screenshot of game.screenshots"
@@ -43,7 +43,7 @@
         alt="screenshot"/>
     </mat-tab>
 
-    <mat-tab label="Trailers" >
+    <mat-tab label="Trailers" *ngIf="game.trailers?.length">
       <video
         class="game-trailer"
         controls
